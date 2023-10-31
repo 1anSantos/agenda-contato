@@ -1,3 +1,10 @@
+# Agenda de Contatos V2
+Projeto de POO | Turma 922-A
+
+Orientador: Ricardo Rubens
+
+TODO...
+
 # Agenda de Contatos V1
 Projeto de POO | Turma: 922-A
 
