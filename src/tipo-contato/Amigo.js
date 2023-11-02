@@ -12,11 +12,16 @@ class Amigo extends Contato {
         return dadosContato;
     }
     setDataAniversario(dataAniversario) {
-        if (validator.isDate(dataAniversario, "DD/MM/YYYY", true))
+        if (Amigo.validateDataAniversario(dataAniversario))
             this._data_aniversario = dataAniversario;
         else
             return false;
     }
+    static validateDataAniversario(dataAniversario) {
+        return validator.isDate(dataAniversario, "DD/MM/YYYY", true);
+    }
 }
 
 export default Amigo;
+
+// const dataRegex = /^(?:\d{2}\/\d{2}\/\d{4}|\d{2}-\d{2}-\d{4})$/; // RegEx

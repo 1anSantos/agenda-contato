@@ -12,10 +12,13 @@ class ColegaDeTrabalho extends Contato {
         return dadosContato;
     }
     setDepartamento(departamento) {
-        if (!validator.isEmpty(departamento))
+        if (ColegaDeTrabalho.validateDepartamento(departamento))
             this._departamento = departamento;
         else
             return false;
+    }
+    static validateDepartamento(departamento) {
+        return typeof departamento === "string" ? !validator.isEmpty(departamento) : false;
     }
 }
 

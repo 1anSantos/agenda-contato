@@ -12,10 +12,13 @@ class Cliente extends Contato {
         return dadosContato;
     }
     setEmpresa(empresa) {
-        if (!validator.isEmpty(empresa))
+        if (Cliente.validateEmpresa(empresa))
             this._empresa = empresa;
         else
             return false;
+    }
+    static validateEmpresa(empresa) {
+        return typeof empresa === "string" ? !validator.isEmpty(empresa) : false;
     }
 }
 
