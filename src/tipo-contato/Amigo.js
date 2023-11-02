@@ -1,6 +1,15 @@
 import Contato from './Contato.js';
 import validator from 'validator';
 
+validator.default = {
+    options: {
+        isDate: {
+            format: 'DD-MM-YYYY',
+            strict: true
+        },
+    }
+};
+
 class Amigo extends Contato {
     constructor(telefone, nome, email, dt_aniversario) {
         super(telefone, nome, email);
@@ -18,7 +27,7 @@ class Amigo extends Contato {
             return false;
     }
     static validateDataAniversario(dataAniversario) {
-        return validator.isDate(dataAniversario, "DD/MM/YYYY", true);
+        return validator.isDate(dataAniversario, { format: 'DD/MM/YYYY' });
     }
 }
 
