@@ -1,4 +1,5 @@
 import Contato from './Contato.js';
+import validator from 'validator';
 
 class ColegaDeTrabalho extends Contato {
     constructor(telefone, nome, email, departamento) {
@@ -11,7 +12,10 @@ class ColegaDeTrabalho extends Contato {
         return dadosContato;
     }
     setDepartamento(departamento) {
-        this._departamento = departamento;
+        if (!validator.isEmpty(departamento))
+            this._departamento = departamento;
+        else
+            return false;
     }
 }
 

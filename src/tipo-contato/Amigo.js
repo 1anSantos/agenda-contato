@@ -1,4 +1,5 @@
 import Contato from './Contato.js';
+import validator from 'validator';
 
 class Amigo extends Contato {
     constructor(telefone, nome, email, dt_aniversario) {
@@ -11,7 +12,10 @@ class Amigo extends Contato {
         return dadosContato;
     }
     setDataAniversario(dataAniversario) {
-        this._data_aniversario = dataAniversario;
+        if (validator.isDate(dataAniversario, "DD/MM/YYYY", true))
+            this._data_aniversario = dataAniversario;
+        else
+            return false;
     }
 }
 

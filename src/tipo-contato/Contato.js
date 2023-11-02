@@ -18,13 +18,22 @@ class Contato {
         };
     }
     setNome(novoNome) {
-        this._nome = novoNome;
+        if (!validator.isEmpty(novoNome))
+            this._nome = novoNome;
+        else
+            return false;
     }
     setEmail(novoEmail) {
-        this._email = novoEmail;
+        if (validator.isEmail(novoEmail))
+            this._email = novoEmail;
+        else
+            return false;
     }
     setTelefone(novoTelefone) {
-        this._telefone = novoTelefone;
+        if (validator.isMobilePhone(novoTelefone, "pt-BR"))
+            this._telefone = novoTelefone;
+        else
+            return false;
     }
     getID() {
         return this._id;
