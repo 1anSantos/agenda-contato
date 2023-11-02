@@ -1,5 +1,3 @@
-import validator from 'validator';
-
 class AgendaDeContatos {
     constructor() {
         this._agenda = [];
@@ -9,14 +7,14 @@ class AgendaDeContatos {
         return this._agenda;
     }
 
-    pesquisarContatos(nome) {
-        return this._agenda.filter(contato => contato.temNomePesquisado(nome));
+    adicionarContato(contato) {
+        // if (this.verificarContato(contato)) {
+            this._agenda.push(contato);
+        // }
     }
 
-    adicionarContato(contato) {
-        if (this.verificarContato(contato)) {
-            this._agenda.push(contato);
-        }
+    pesquisarContatos(nome) {
+        return this._agenda.filter(contato => contato.temNomePesquisado(nome));
     }
     
     excluirContato(index) {
@@ -24,22 +22,47 @@ class AgendaDeContatos {
     }
     
     editarContato(contato, propriedade, valor) {
-        propriedade = propriedade.replace(/_+/g, ' ').split(" ").map(word => {
-            word = word.charAt(0).toUpperCase() + word.slice(1);
-            return word;
-        }).join("");
+        propriedade = propriedade
+            .replace(/[_\s]+/g, " ")
+            .split(" ")
+            .map(word => {
+                word = word.charAt(0).toUpperCase() + word.slice(1);
+                return word;
+            })
+            .join("");
+
         contato[`set${propriedade}`](valor);
     }
     
-    verificarContato(contato) {
-        const dados = contato.getDados();
-        if (this._agenda.includes(dados.id))
-            return false;
-        if (isNaN(dados.id))
-            return false;
-        if (this._agenda.includes(dados.id))
-            return false;
-    }
+    //! Refazer Código 
+    // validateContato(contato) {
+    //     const dados = contato.getDados();
+
+    //     if (isNaN(dados.id) || dados.id < 0)
+    //         return false;
+    //     if (this._agenda.includes(contato => contato.id === dados.id))
+    //         return false;
+        
+    //     for (const nomePropriedade in dados) {
+    //         if (nomePropriedade === "id") continue;
+
+    //         const valorPropriedade = dados[nomePropriedade];
+
+    //         propriedade = propriedade
+    //             .replace(/[_\s]+/g, " ")
+    //             .split(" ")
+    //             .map(word => {
+    //                 word = word.charAt(0).toUpperCase() + word.slice(1);
+    //                 return word;
+    //             })
+    //             .join("");
+
+    //         if (!contato[`validate${propriedade}`](valorPropriedade))
+    //             return false;
+    //     }
+        
+    //     return true;
+    // }
 }
 
 export default AgendaDeContatos;
