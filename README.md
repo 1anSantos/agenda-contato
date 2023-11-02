@@ -3,18 +3,23 @@ Projeto de POO | Turma 922-A
 
 Orientador: Ricardo Rubens
 
-## TODO Integrantes
-- Gabriel Rodrigues ()
-- Ian dos Santos ()
-- Mayara Lins ()
+## Integrantes
+- **Gabriel Rodrigues** -> Função: Desenvolvedor e Analista de Testes, fez a Classe ColegaDeTrabalho e testou o programa em busca de bugs;
+- **Ian dos Santos** -> Função: Desenvolvedor, fez a Classe Contato e Menu;
+- **Mayara Lins** -> Função: Desenvolvedor, fez as Subclasses Cliente e Amigo;
 
-## TODO Perguntas
+## Perguntas
 1. Tudo o que foi pedido foi realizado? Faltou Algo?
+    - Sim e ainda foi realizado até validação entre as opções 
 2. Há algum problema/erro indentificado?
+    - Não existe campos opcionais e Campo de editar não funciona
 3. Descrição da experiência:
+    - Bastante desafiadora, pudemos praticar o conteúdo visto em aula e tivemos a oportunidade de compreender o assunto melhor de maneira ativa, além de adicionar coisas a mais nesse projeto.
 4. Dificuldades encontradas:
+    - Separação da parte gráfica do código central
+    - A validação de data estava dando erro pois na nova versão do pacote validator essa função está passando por manuntenção, então tivemos que ir para uma versão anterior (13.9.0)
 
-## TODO Referências
+## Referências
 1. Pacote validator:
     - `npm install validator`
     - https://www.npmjs.com/package/validator
