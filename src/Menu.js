@@ -97,71 +97,27 @@ class Menu {
         this._agenda.excluirContato(this._agenda.getAgenda().indexOf(contato));
     }
 
-    // editarContato() {
-    //     Menu._linha();
-    //     console.log(
-    //     "1- Editar Nome\n"+
-    //     "2- Editar Email\n"+
-    //     "3- Editar Telefone\n"+
-    //     "4- Editar Tudo\n"+
-    //     "5- Cancelar"
-    //     );
-    //     const opcao = parseInt(prompt('>> '));
+    editarContato() {
+        Menu._linha();
 
-    //     if (opcao === 5) {
-    //         console.log("\n( Evento Cancelado )");
-    //         return;
-    //     }
-    //     if (opcao !== 1 && opcao !== 2 && opcao !== 3 && opcao !== 4) {
-    //         console.error(`\nA opção ${opcao} é inválida!!!`);
-    //         return true;
-    //     }
+        const contato = this._selecionarContato();
+        if (contato === undefined) return;
 
-    //     const contato = this._selecionarContato();
-    //     if (contato === undefined) return;
+        const dados = contato.getDados();
+        for (const propriedade in dados) {
+            if (propriedade === "id") continue;
+            const title = Menu.nomePropriedadeParaTitulo(propriedade);
+            
+            console.log(`\nEditar ${title}:`);
+            const value = prompt('>> ').trim().replace(/ +/, " ");
 
-    //     switch(opcao) {
-    //         case 1:
-    //             console.log("\nDigite Nome:");
-    //             const nome = prompt(">> ").trim().replace(/ +/, " ");
-    //             if (Contato.validateNome(nome)) {
-    //                 console.error("Nome inválido!");
-    //                 return;
-    //             }
-    //             contato.setNome(nome);
-    //             break;
-    //         case 2:
-    //             console.log("\nDigite Email:");
-    //             const email = prompt(">> ").replace(/ +/, "");
-    //             if (contato.setEmail(email);) {
-    //                 console.error("Email inválido!");
-    //                 return;
-    //             }
-    //             break;
-    //         case 3:
-    //             console.log("\nDigite Telefone:");
-    //             const telefone = prompt(">> ").trim().replace(/ +/, "");
-    //             if (contato.setTelefone(telefone)) {
-    //                 console.error("Telefone inválido!");
-    //                 return;
-    //             }
-    //             break;
-    //         case 4:
-    //             for (const nomePropriedade in contato) {
-    //                 const title = Menu.nomePropriedadeParaTitulo(nomePropriedade);
-    //                 const valorPropriedade = contato[nomePropriedade];
-    //                 if (typeof valorPropriedade === "function") continue;
-
-    //                 console.log(`\nDigite ${title}:`);
-    //                 const valor = prompt(">> ").trim().replace(/ +/, "");
-    //                 if (contato[`validate${nomePropriedade}`](valor)) {
-    //                     console.error("Valor inválido!");
-    //                     return;
-    //                 }
-    //                 contato[`set${nomePropriedade}`](valor);
-    //             }
-    //     }
-    // }
+            const answer = this._agenda.editarContato(contato, propriedade, value);
+            if (!answer) {
+                console.error(`Valor inválido!`);
+                return;
+            }
+        }
+    }
 
     visualizarAgenda(lista) {
         Menu._linha();
