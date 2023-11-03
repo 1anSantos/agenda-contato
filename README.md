@@ -12,7 +12,7 @@ Orientador: Ricardo Rubens
 1. Tudo o que foi pedido foi realizado? Faltou Algo?
     - Sim e ainda foi realizado até validação entre as opções 
 2. Há algum problema/erro indentificado?
-    - Não existe campos opcionais e Campo de editar não funciona
+    - Não existe campos opcionais
 3. Descrição da experiência:
     - Bastante desafiadora, pudemos praticar o conteúdo visto em aula e tivemos a oportunidade de compreender o assunto melhor de maneira ativa, além de adicionar coisas a mais nesse projeto.
 4. Dificuldades encontradas:
