@@ -100,6 +100,8 @@ class Menu {
     editarContato() {
         Menu._linha();
 
+        console.warn("☕ Se você deixar um campo em branco ele não será atualizado\n");
+
         const contato = this._selecionarContato();
         if (contato === undefined) return;
 
@@ -114,7 +116,6 @@ class Menu {
             const answer = this._agenda.editarContato(contato, propriedade, value);
             if (!answer) {
                 console.error(`Valor inválido!`);
-                return;
             }
         }
     }
