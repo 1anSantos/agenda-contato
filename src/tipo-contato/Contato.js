@@ -50,7 +50,6 @@ class Contato {
         return nomeContato.includes(nomePesquisado);
     }
     static validateNome(nome) {
-        console.log(typeof nome === "string" ? !validator.isEmpty(nome) : false)
         return typeof nome === "string" ? !validator.isEmpty(nome) : false;
     }
     static validateEmail(email) {
