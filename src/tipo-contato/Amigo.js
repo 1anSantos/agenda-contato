@@ -21,8 +21,10 @@ class Amigo extends Contato {
         return dadosContato;
     }
     setDataAniversario(dataAniversario) {
-        if (Amigo.validateDataAniversario(dataAniversario))
+        if (Amigo.validateDataAniversario(dataAniversario)) {
             this._data_aniversario = dataAniversario;
+            return true;
+        }
         else
             return false;
     }

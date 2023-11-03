@@ -12,8 +12,10 @@ class ColegaDeTrabalho extends Contato {
         return dadosContato;
     }
     setDepartamento(departamento) {
-        if (ColegaDeTrabalho.validateDepartamento(departamento))
+        if (ColegaDeTrabalho.validateDepartamento(departamento)) {
             this._departamento = departamento;
+            return true;
+        }
         else
             return false;
     }

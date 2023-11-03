@@ -13,20 +13,26 @@ class Contato {
         return this._id;
     }
     setNome(novoNome) {
-        if (Contato.validateNome(novoNome))
+        if (Contato.validateNome(novoNome)){
             this._nome = novoNome;
+            return true;
+        }
         else
             return false;
     }
     setEmail(novoEmail) {
-        if (Contato.validateEmail(novoEmail))
+        if (Contato.validateEmail(novoEmail)){
             this._email = novoEmail;
+            return true;
+        }
         else
             return false;
     }
     setTelefone(novoTelefone) {
-        if (Contato.validateTelefone(novoTelefone))
+        if (Contato.validateTelefone(novoTelefone)){
             this._telefone = novoTelefone;
+            return true;
+        }
         else
             return false;
     }
@@ -44,6 +50,7 @@ class Contato {
         return nomeContato.includes(nomePesquisado);
     }
     static validateNome(nome) {
+        console.log(typeof nome === "string" ? !validator.isEmpty(nome) : false)
         return typeof nome === "string" ? !validator.isEmpty(nome) : false;
     }
     static validateEmail(email) {

@@ -12,8 +12,10 @@ class Cliente extends Contato {
         return dadosContato;
     }
     setEmpresa(empresa) {
-        if (Cliente.validateEmpresa(empresa))
+        if (Cliente.validateEmpresa(empresa)) {
             this._empresa = empresa;
+            return true;
+        }
         else
             return false;
     }
