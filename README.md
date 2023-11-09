@@ -12,10 +12,11 @@ Orientador: Ricardo Rubens
 1. Tudo o que foi pedido foi realizado? Faltou Algo?
     - Sim e ainda foi realizado até validação entre as opções 
 2. Há algum problema/erro indentificado?
-    - Não existe campos opcionais
+    - Não é bem um erro e sim algo que incomoda o usuário, não existir campos opcionais e na hora de editar, quando o usuário deixa um campo em branco de propósito para não ser atualizado ele alerta como "campo inválido"
 3. Descrição da experiência:
     - Bastante desafiadora, pudemos praticar o conteúdo visto em aula e tivemos a oportunidade de compreender o assunto melhor de maneira ativa, além de adicionar coisas a mais nesse projeto.
 4. Dificuldades encontradas:
+    - passar o modelo *Common JS* do **prompt-sync** para o modelo *ES6*
     - Separação da parte gráfica do código central
     - A validação de data estava dando erro pois na nova versão do pacote validator essa função está passando por manuntenção, então tivemos que ir para uma versão anterior (13.9.0)
 
