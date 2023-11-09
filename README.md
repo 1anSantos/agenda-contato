@@ -3,6 +3,8 @@ Projeto de POO | Turma 922-A
 
 Orientador: Ricardo Rubens
 
+obs: Para a visualização de versões anteriores cheque outras branchs
+
 ## Integrantes
 - **Gabriel Rodrigues** -> Função: Desenvolvedor e Analista de Testes, fez a Classe ColegaDeTrabalho e testou o programa em busca de bugs;
 - **Ian dos Santos** -> Função: Desenvolvedor, fez a Classe Contato e Menu;
