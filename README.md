@@ -9,7 +9,9 @@ obs: Para a visualização de versões anteriores cheque outras branchs
 
 ## Integrantes
 - **Gabriel Rodrigues** -> Função: Desenvolvedor e Analista de Testes, fez a Classe ColegaDeTrabalho e testou o programa em busca de bugs;
+
 - **Ian dos Santos** -> Função: Desenvolvedor, fez a Classe Contato e Menu;
+
 - **Mayara Lins** -> Função: Desenvolvedor, fez as Subclasses Cliente e Amigo;
 
 
