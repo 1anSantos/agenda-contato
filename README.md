@@ -1,30 +1,35 @@
-# Agenda de Contatos V2
-Projeto de POO | Turma 922-A
+# Agenda de Contatos V1
+Projeto de POO | Turma: 922-A
 
-Orientador: Ricardo Rubens
+Orientador: Ricardo Nunes
 
-## Integrantes
-- **Gabriel Rodrigues** -> Função: Desenvolvedor e Analista de Testes, fez a Classe ColegaDeTrabalho e testou o programa em busca de bugs;
-- **Ian dos Santos** -> Função: Desenvolvedor, fez a Classe Contato e Menu;
-- **Mayara Lins** -> Função: Desenvolvedor, fez as Subclasses Cliente e Amigo;
+## Participantes
+- **Gabriel Rodrigues** (Função: Desenvolvedor, responsável pela criação da classe Contato e seus métodos e o método de pesquisa);
+- **Ian dos Santos** (Função: Desenvolvedor, responsável pelos métodos de edição dos contatos e métodos privados);
+- **Mayara Lins** (Função: Analista de Testes, responsável pelos métodos de visualização e adição dos contatos);
+- **Victoria Antonella** (Função: Analista de Testes, responsável pelo método de excluir contato e achar bugs no meio dos códigos);
 
 ## Perguntas
-1. Tudo o que foi pedido foi realizado? Faltou Algo?
-    - Sim e ainda foi realizado até validação entre as opções 
-2. Há algum problema/erro indentificado?
-    - Não existe campos opcionais
+1. Tudo o que foi pedido foi realizado? Faltou algo?
+    - Todos os requisitos propostos foram atendidos. 
+
+2. Há algum problema/erro identificado?
+    - No decorrer do desenvolvimento de nosso projeto tivemos alguns empecilhos, mas que foram resolvidos. Como, por exemplo, utilizamos o trim() para remover os desnecessários no início e no final da string. E foi feita uma verificação para garantir que o usuário preenchesse os campos de texto caso o contrário o objeto iria voltar vazio.
+    Também houve erro no método editarContato(), pois as variáveis eram criadas dentro do If e, posteriormente, não podiam ser chamadas. 
+    Além disso, houve um problema no RegEx do email e para solucioná-lo pegamos a referência em um site.
+
 3. Descrição da experiência:
-    - Bastante desafiadora, pudemos praticar o conteúdo visto em aula e tivemos a oportunidade de compreender o assunto melhor de maneira ativa, além de adicionar coisas a mais nesse projeto.
+    - Tivemos algumas dificuldades na execução de algumas partes do código, mas com o auxílio de alguns materiais de pesquisa conseguimos compreender e corrigir nossos erros. 
+    Dividimos nosso código em seções, para que fosse  melhor entendido e explicado.
+
 4. Dificuldades encontradas:
-    - Separação da parte gráfica do código central
-    - A validação de data estava dando erro pois na nova versão do pacote validator essa função está passando por manuntenção, então tivemos que ir para uma versão anterior (13.9.0)
+    - Saber onde e quando colocar propriedades e métodos privado
+    - Validação de nome, telefone, email
+    - RegEx
 
 ## Referências
-1. Pacote validator:
-    - `npm install validator`
-    - https://www.npmjs.com/package/validator
-    - https://github.com/validatorjs/validator.js
-2. Normalize:
-    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
-3. Problema de passar o prompt-sync para o modelo ES6:
-    - https://stackoverflow.com/questions/65852175/convert-prompt-sync-require-into-import-method
+1. RegEx Telefone:
+    - https://pt.stackoverflow.com/questions/46672/como-fazer-uma-express%C3%A3o-regular-para-telefone-celular
+
+2. RegEx E-mail:
+    - https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail
