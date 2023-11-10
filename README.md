@@ -3,7 +3,7 @@ Projeto de POO | Turma 922-A
 
 Orientador: Ricardo Rubens
 
-obs: Para a visualização de versões anteriores cheque outras branchs
+obs: Utilize o CHANGELOG.md para ver as mudanças entre as versões e acesse-as através das branchs do projeto.
 
 
 
