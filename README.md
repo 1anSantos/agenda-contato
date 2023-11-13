@@ -7,6 +7,14 @@ obs: Utilize o CHANGELOG.md para ver as mudanças entre as versões e acesse-as 
 
 
 
+## TODO
+- Arrumar uma outra forma de identificação do contato e consequentemente a forma de seleciona-lo para edição e remoção
+- Melhorar o código do Menu
+- Adicionar mais opções de editar contato
+- Fazer uma versão para o prompt e outra para HTML
+
+
+
 ## Integrantes
 - **Gabriel Rodrigues** -> Função: Desenvolvedor e Analista de Testes, fez a Classe ColegaDeTrabalho e testou o programa em busca de bugs;
 
